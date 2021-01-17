@@ -24,14 +24,15 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 15px 168px;
+    margin: 15px 104px 0;
+    line-height: 1.6;
     
     %Nav{
         font-family: 'DM Serif Display';
         font-weight: 400;
         text-transform: uppercase;
     }
-    .links a{
+    .links a, #logo {
         @extend %Nav;
         padding: 15px;
         text-decoration:none;
@@ -45,51 +46,58 @@ nav{
         color: $veryDarkViolet;
     }
 }
-#top-right{
-    z-index: 10;
-    position: relative;
-    transform: translateY(-83px);
-    float: right;
-}
+
 /* Page Body */
 .main-wrapper{
     @extend %body;
-    overflow: hidden;
+    position: relative;
     color: $veryLightGray;
     background-color: $darkViolet;
+    height: 573px;
     
     
     .wrapper{
-        margin: 97px 168px;
-        
+        position: relative;
+        padding: 97px 104px;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        // background-color: $darkViolet;
         #line{
             width: 6.5%;
             margin-bottom: 35px;
             border-bottom: 1px solid white;
         }
         .title{
-            width: 23%;
             font-size: 20px;
+            
+            h1{
+                width: 43%;
+            }
+            .description{
+                max-width: 93%;
+            }
             
         }
         .description{
             margin-top: 20px;
-            width: 40%;
             input{
                 margin-top: 20px;
                 padding: 10px 26px;
                 text-transform: uppercase;
             }
         }
-        .image{
+        .image #top-right{
             position: absolute;
-            transform: translate(105%,-296px);
+            transform: translate(-62%, -30%);
+            overflow: hidden;
+            z-index: 1;
         }
     }
 }
 #bottom-left{
     position: absolute;
-    transform: translateY(-130px);
+    transform: translate(-55%,4%);
     
 }
 .line{
@@ -99,7 +107,7 @@ nav{
     }
 #k{
     .wrapper{
-        margin: 0 168px ;
+        margin: 0 104px ;
     }
 }
 .items{
@@ -116,8 +124,7 @@ nav{
     
     img{
     position:absolute;
-    height: 167px;
-    transform: translate(809px, 8px);
+    transform: translate(796px, -30px);
     }
 }
 .container-wrapper{
@@ -126,9 +133,9 @@ nav{
     color: $veryLightGray;
     display: flex;
     justify-content: space-between;
-    padding: 50px 70px;
+    padding: 73px 49px;
     .heading{
-        width: 28%;
+        width: 24%;
     }
     .btn input{
         background-color: $darkViolet;
@@ -140,7 +147,7 @@ nav{
 }
 
 .footer{
-    padding: 40px 168px;
+    padding: 40px 104px;
     text-transform: uppercase;
     background-color: $veryLightGray;
     #footer-img{
@@ -171,5 +178,18 @@ nav{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         margin: 5px 0;
+    }
+}
+
+/* @media queries (Responsive design */
+
+/* For screen 4k (2560px)  */
+@media only screen and  (max-width: 2560px){
+    nav .links a{
+        color: green;
+    }
+
+    .main-wrapper .wrapper .image{
+        max-width: 100%;
     }
 }
