@@ -147,11 +147,11 @@ nav .links input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 73px 49px;
+  padding: 70px 80px;
 }
 
 .container-wrapper .heading {
-  width: 24%;
+  width: 25%;
 }
 
 .container-wrapper .btn input {
@@ -160,6 +160,7 @@ nav .links input {
   border: 1px solid #fafafa;
   padding: 10px;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .footer {
@@ -213,9 +214,6 @@ nav .links input {
 /* @media queries (Responsive design */
 /* For screen 4k (2560px)  */
 @media only screen and (max-width: 2560px) {
-  nav .links a {
-    color: green;
-  }
   .main-wrapper .wrapper .image {
     max-width: 100%;
   }
