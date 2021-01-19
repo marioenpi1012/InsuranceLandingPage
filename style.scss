@@ -21,30 +21,47 @@ body{
 }
 /* Nav */
 
+
 nav{
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    text-transform: uppercase;
     display: flex;
     justify-content: space-between;
     margin: 15px 104px 0;
     line-height: 1.6;
     
-    %Nav{
-        font-family: 'DM Serif Display';
-        font-weight: 400;
-        text-transform: uppercase;
+    #logo .x img{
+        display: none;
     }
     .links a, #logo {
-        @extend %Nav;
-        padding: 15px;
+        margin: 15px;
         text-decoration:none;
-        color:$darkGrayishViolet
-        
+        color:$darkGrayishViolet;
+       
+    }
+    .links a:hover{
+        color: #000000;
+        width: fit-content;
     }
     .links input{
-        @extend %Nav;
-        padding: 5px;
+        text-transform: uppercase;
+        padding: 12px;
         border:1px solid $veryDarkViolet;
         color: $veryDarkViolet;
+        background-color: #ffff;
+    } 
+    .links input:hover{
+        background-color: #000000;
+        color:#ffff
     }
+    #nav-img{
+        display: none;
+        img{
+            display:none;
+        }
+    }
+    
 }
 
 /* Page Body */
@@ -54,7 +71,6 @@ nav{
     color: $veryLightGray;
     background-color: $darkViolet;
     height: 573px;
-    
     
     .wrapper{
         position: relative;
@@ -85,6 +101,16 @@ nav{
                 margin-top: 20px;
                 padding: 10px 26px;
                 text-transform: uppercase;
+                border: 1px solid #ffff;
+                background-color: $darkViolet;
+                color: #ffff;
+            }
+            input:hover{
+                background-color: #ffff;
+                color: #555555;
+            }
+            img{
+                display: none;
             }
         }
         .image #top-right{
@@ -106,6 +132,8 @@ nav{
         border-bottom: 1px solid black;
     }
 #k{
+    position: relative; 
+    margin-top: 250px;
     .wrapper{
         margin: 0 104px ;
     }
@@ -121,29 +149,32 @@ nav{
 }
 #about{
     overflow: hidden;
+    position: relative;
+    margin: 70px 104px;
+
     
-    img{
-    position:absolute;
-    transform: translate(796px, -30px);
-    }
 }
 .container-wrapper{
-    
     background-color: $darkViolet;
     color: $veryLightGray;
     display: flex;
     justify-content: space-between;
     padding: 70px 80px;
-    .heading{
-        width: 25%;
-    }
     .btn input{
         background-color: $darkViolet;
         color: $veryLightGray;
         border: 1px solid $veryLightGray;
         padding: 10px;
         text-transform: uppercase;
-        z-index: 1;
+    }
+    .btn input:hover{
+        background-color: #ffff;
+        color: #000;
+    }
+    .btn div img{
+        pointer-events: none;
+        position: absolute;
+        transform: translate(-51%,-53%);
     }
 }
 
@@ -154,6 +185,7 @@ nav{
     #footer-img{
         position: absolute;
         transform: translate(-164px, -37px);
+        pointer-events: none;
     }
     div .footer-nav{
         display: flex;
@@ -162,6 +194,9 @@ nav{
         
         .social-media img{
             padding: 0 5px;
+        }
+        .social-media img:hover{
+            filter:brightness(.5%) ;
         }
     }
     .line{
@@ -172,23 +207,267 @@ nav{
 }
 .links{
     margin: 20px 0 30px;
-    #first-row{
-        color:$grayishBlue
-    }
+    display: flex;
+    justify-content: space-between;
     div{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        margin: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5px 150px 0 0 ;
+        .heading{
+            color: $grayishBlue;
+            margin: 10px 0;
+        }
+        a{
+            text-decoration:none;
+            color:#000;
+            padding: 10px 0 ;
+        }:hover{
+            text-decoration: underline;
+        }
     }
 }
 
 /* @media queries (Responsive design */
 
-/* For screen 4k (2560px)  */
-@media only screen and  (max-width: 2560px){
-    
-
-    .main-wrapper .wrapper .image{
-        max-width: 100%;
+/* For phones  */
+@media only screen and (max-width: 600px){
+    *, body {
+        padding: 0;
+        margin: 0;
     }
+    /* Nav Start */
+    nav {
+        display:block;
+        margin: 0;
+        
+        #logo{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            div img{
+                
+                vertical-align: middle;
+            }
+            .x{
+                .open{
+                    display: block;
+                }
+                .close{
+                    display: none;
+                }
+                #open-nav{
+                    display: block;
+                }
+                #close-nav{
+                    display: none;
+                }
+            }
+        }
+        
+        .links{
+            display: none;
+            min-height: 100vh;
+            text-align: -webkit-center;
+            background-color: $veryDarkViolet;
+            padding: 30px 0 0;
+            font-size: 20px;
+            overflow: hidden;
+            a, input{
+                color:#ffff;
+                display: block;
+                padding: 10px 0 ;
+                
+            }
+            input{
+                background-color: $veryDarkViolet;
+                border: 1px solid #ffff;
+                width: 75%;
+                padding: 20px;
+            }   
+        }
+        #nav-img{
+            display: block;
+            transform: translate(0%,100%);
+            img{
+                display: block;
+                position: relative;
+                bottom: 0;
+            }
+        }   
+    }
+    /* Nav Ends */
+
+    /* Intro Starts */
+    .main-wrapper{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        overflow: visible;
+        .wrapper{
+            overflow: visible;
+            background-image: url('./images/bg-pattern-intro-right-mobile.svg');
+            background-repeat: no-repeat;
+            padding:0;
+            margin: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: $darkViolet;
+            .title{
+                background-image: url('./images/bg-pattern-intro-left-mobile.svg');
+                background-repeat: no-repeat;
+                #line{
+                    width: 0;
+                    margin-bottom: none;
+                    border-bottom: none;
+                }
+                h1{
+                    text-align: center;
+                    width: 80%;
+                    padding: 33px 35px;
+                }
+                .description{
+                    overflow: visible;
+                    font-size: 16px;
+                    max-width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    padding: 10px 35px 64px;
+                    /* background-image: url('./images/bg-pattern-intro-right-mobile.svg');
+                    background-repeat: no-repeat;
+                    background-position: 100% -66%; */
+                    img{
+                        position: absolute;
+                    }
+                }
+                #bottom-left{
+                    display: none;
+                }
+                
+            }
+            .image{
+                img{
+                    width: 100%;
+                }
+                #top-right{
+                    display: none;
+                }
+               
+            }
+        }
+    }
+    /* Intro Ends */
+
+    /*  WhatWeDo Starts */
+    #k{
+        /* background-image: url('./images/bg-pattern-intro-right-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: 103% -102%; */
+        display: block;
+        position: relative;;
+        padding: 0;
+        margin: 170px 0 50px;
+        overflow: visible;
+        .wrapper{
+            margin:0;
+            .line{
+                width: 54%;
+                margin:37px 90px;
+                padding:20px 0;
+                border-bottom: 1px solid $darkViolet;
+            }
+            .whatWeDo{
+                .title{
+                    // margin: 10px 10px;
+                    text-align: center;
+                    h1{
+                        font-size: 3rem;
+                    }
+                }
+                .items{
+                    display: block;
+                    margin: 37px;
+                    .item{
+                        text-align:center;
+                        width: 100%;
+                        h2{
+                            margin: 15px 0;
+                            color:#000
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* WhatWeDo Ends */
+
+    /* About Starts */
+        #about{
+            margin: 0 31px;
+            padding: 0;
+            
+            .container-wrapper{
+                background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
+                background-repeat: no-repeat;
+                background-position: 100% 0%;
+                display: block;
+                padding: 70px 20px;
+                .heading{
+                    text-align: center;
+                    width: 90%;
+                }
+                .btn{
+                    text-align: center;
+                    margin: 25px;
+                    input{
+                        padding: 15px 25px;
+                    }
+                    div img{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    /* About Ends */
+
+    /* Footer Starts */
+    .footer{
+        display: block;
+        padding: 0;
+        margin: 30% 0;
+        #footer-img{
+            display: none;
+        }
+        .footer-wrapper{
+            .footer-nav{
+                display: block;
+                text-align: center;
+                padding: 40px;
+                .logo{
+                    padding: 30px;
+                }
+            }
+            .line{
+                width: 85%;
+                margin: 10px 22px;
+            }
+            .links{
+                margin: 0;
+                display: block;
+                text-align: center;
+                div{
+                    margin: 0;
+                    .heading{
+                        color: gray;
+                    }
+                    a{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    /* Footer Ends */
 }
+
