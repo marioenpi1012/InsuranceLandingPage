@@ -345,7 +345,6 @@ nav #nav-img img {
             transform: translate(0%, 100%);
   }
   nav #nav-img img {
-    width: 100%;
     display: block;
     position: relative;
     bottom: 0;
