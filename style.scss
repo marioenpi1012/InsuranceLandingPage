@@ -50,6 +50,7 @@ nav{
         border:1px solid $veryDarkViolet;
         color: $veryDarkViolet;
         background-color: #ffff;
+        -webkit-appearance: none;
     } 
     .links input:hover{
         background-color: #000000;
@@ -104,6 +105,7 @@ nav{
                 border: 1px solid #ffff;
                 background-color: $darkViolet;
                 color: #ffff;
+                -webkit-appearance: none;
             }
             input:hover{
                 background-color: #ffff;
@@ -166,6 +168,7 @@ nav{
         border: 1px solid $veryLightGray;
         padding: 10px;
         text-transform: uppercase;
+        -webkit-appearance: none;
     }
     .btn input:hover{
         background-color: #ffff;
