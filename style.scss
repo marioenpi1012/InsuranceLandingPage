@@ -30,6 +30,7 @@ nav{
     justify-content: space-between;
     margin: 15px 104px 0;
     line-height: 1.6;
+    align-items:center;
     
     #logo .x img{
         display: none;
@@ -49,10 +50,9 @@ nav{
         border:1px solid $veryDarkViolet;
         color: $veryDarkViolet;
         background-color: #ffff;
-        -webkit-appearance: initial;
+        -webkit-appearance:initial;
         -webkit-border-radius:0px;
-        text-indent: 15px;
-        line-height: 28px;
+        line-height: 30px;
     } 
     .links input:hover{
         background-color: #000000;
@@ -107,7 +107,7 @@ nav{
                 border: 1px solid #ffff;
                 background-color: $darkViolet;
                 color: #ffff;
-                -webkit-appearance: none;
+                -webkit-appearance: initial;
                 -webkit-border-radius:0px;
             }
             input:hover{
@@ -171,7 +171,7 @@ nav{
         border: 1px solid $veryLightGray;
         padding: 10px;
         text-transform: uppercase;
-        -webkit-appearance: none;
+        -webkit-appearance: initial;
         -webkit-border-radius:0px;
 
     }

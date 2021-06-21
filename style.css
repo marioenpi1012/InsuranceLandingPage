@@ -24,6 +24,9 @@ nav {
           justify-content: space-between;
   margin: 15px 104px 0;
   line-height: 1.6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav #logo .x img {
@@ -49,6 +52,9 @@ nav .links input {
   border: 1px solid #2b272f;
   color: #2b272f;
   background-color: #ffff;
+  -webkit-appearance: initial;
+  -webkit-border-radius: 0px;
+  line-height: 30px;
 }
 
 nav .links input:hover {
@@ -113,6 +119,8 @@ nav #nav-img img {
   border: 1px solid #ffff;
   background-color: #2d2640;
   color: #ffff;
+  -webkit-appearance: initial;
+  -webkit-border-radius: 0px;
 }
 
 .main-wrapper .wrapper .description input:hover {
@@ -192,6 +200,8 @@ nav #nav-img img {
   border: 1px solid #fafafa;
   padding: 10px;
   text-transform: uppercase;
+  -webkit-appearance: initial;
+  -webkit-border-radius: 0px;
 }
 
 .container-wrapper .btn input:hover {
