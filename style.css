@@ -52,6 +52,7 @@ nav .links input {
   border: 1px solid #2b272f;
   color: #2b272f;
   background-color: #ffff;
+  border-radius: 0;
   -webkit-appearance: initial;
   -webkit-border-radius: 0px;
   line-height: 30px;
@@ -119,6 +120,7 @@ nav #nav-img img {
   border: 1px solid #ffff;
   background-color: #2d2640;
   color: #ffff;
+  border-radius: 0;
   -webkit-appearance: initial;
   -webkit-border-radius: 0px;
 }
@@ -200,8 +202,10 @@ nav #nav-img img {
   border: 1px solid #fafafa;
   padding: 10px;
   text-transform: uppercase;
+  border-radius: 0;
   -webkit-appearance: initial;
   -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
 }
 
 .container-wrapper .btn input:hover {
